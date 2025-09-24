@@ -12,4 +12,4 @@ COPY --from=build /app/target/app.war app.war
 ENV PORT=8080
 ENV JAVA_OPTS=""
 EXPOSE 8080
-CMD ["bash", "-lc", "java $JAVA_OPTS -Dserver.port=$PORT -jar app.jar"]
+CMD ["bash", "-lc", "java $JAVA_OPTS -Dserver.port=$PORT -jar app.war"]
